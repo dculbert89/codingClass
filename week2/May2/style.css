@@ -1,0 +1,25 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+p {
+    color: blue;
+}
+
+/* To use class names, you must use a period 
+    followed by your class name in your CSS rule */
+
+/* Hiearachy goies: tag names, class, id names 
+    (with ids being most specific) */
+
+.paragraph-text {
+    color: red
+}
+
+/* To use id names, you must use a hashtag followed by
+    id name. */
+
+#last-paragraph {
+    color: green;
+}

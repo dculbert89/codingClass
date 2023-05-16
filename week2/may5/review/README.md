@@ -1,0 +1,15 @@
+- Student Submitted Questions / Topics:
+- JavaScript
+- Arrays
+    - What are they?
+    - Array notation
+    - Array methods (what are they?)
+    - List of array methods:
+    - push / pop
+    - slice
+    - shift / unshift
+    - indexOf
+    - includes
+    - reverse
+    -Arrary.isArray
+- Zooming out: How can we better "translate" JavaScript as beginners?

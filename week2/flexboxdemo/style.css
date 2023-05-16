@@ -1,0 +1,38 @@
+header {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+h1 {
+    border: 2px solid grey;
+    background-color: turquoise;
+    width: 40%;
+}
+
+.container {
+    display: flex;
+    display: inline-block;
+    flex-wrap: nowrap;
+    background-color: grey;
+    padding: 25px;
+}
+#cannedTitle {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#dryGoods {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#pantryImage {
+    height: 120px;
+    min-height:100%;
+    align-items: baseline;
+}
+
+#veggies {
+    text-align: left;
+}

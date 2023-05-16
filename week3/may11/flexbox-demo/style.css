@@ -1,0 +1,12 @@
+#main-flexbox-container {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.flexbox-child {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    border: .25em dotted blue;
+}

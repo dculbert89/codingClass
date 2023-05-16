@@ -1,0 +1,39 @@
+body {
+    background-color: aqua;
+    font-size: 2vw;
+    /* border: 2px solid black; */
+}
+
+#form {
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1%;
+    /* border: 2px solid black; */
+}
+
+.p1 {
+    border: 5px solid black;
+    width: 25vw;
+    height: auto;
+    padding: 1%;
+}
+
+.p2 {
+    border: 5px solid black;
+    width: 25vw;
+    height: auto;
+    padding: 1%;
+}
+
+.p3 {
+    border: 5px solid black;
+    align-self: center;
+    width: auto;
+    height: 30vh;
+    padding: 1%;
+}
