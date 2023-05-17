@@ -39,7 +39,7 @@
                         numVowels++;
                     } else {
                         numConsonants++;
-                }
+                    }
                 }
                 // Print the phrase
                 console.log('"' + word + '" has ' + numVowels + ' vowels and ' + numConsonants + ' consonants.');
@@ -59,15 +59,35 @@
         array2 = [1, 3, 5, 7, 9, 11]
         array3 = [20, 50, 30, 60, 200]
         array4 = [1, -1, 2, -3, 5, -8, 13]
-        // function to reverse the array
-        function newArray(array){
-            console.log(array.reverse());
+    
+                    // !!!!!! forgot to use loop !!!!!!!!!!!!
+                        // function to reverse the array
+                        // function newArray(array){
+                        //     console.log(array.reverse());
+                        // }
+
+                        // newArray(array1);
+                        // newArray(array2);
+                        // newArray(array3);
+                        // newArray(array4);
+
+        function reverseArray(arr){
+            const answer = [];
+
+            for(i = 0; i < arr.length; i++){
+                let element = arr[i];
+                answer.unshift(element);
+            }
+
+            return answer;
         }
 
-        newArray(array1);
-        newArray(array2);
-        newArray(array3);
-        newArray(array4);
+        console.log(reverseArray(array1));
+        console.log(reverseArray(array2));
+        console.log(reverseArray(array3));
+        console.log(reverseArray(array4));
+
+
 
 
 
@@ -75,23 +95,49 @@
 // For each multiple of 3, print "Fizz" instead of the number.
 // For each multiple of 5, print "Buzz" instead of the number.
 // For numbers that are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
-        function fizzBuzz() {
-            // counter
-            for (let num = 1; num <= 100; num++) {
-                // multiples of both 3 and 5, print "FizzBuzz" instead of the number
-                if (num % 3 === 0 && num % 5 === 0) {
-                    console.log("FizzBuzz");
-                    // multiple of 3, print "Fizz" instead of the number.
-                } else if (num % 3 === 0) {
-                    console.log("Fizz");
-                    // multiple of 5, print "Buzz" instead of the number.
-                } else if (num % 5 === 0) {
-                    console.log("Buzz");
-                    // Print the number if none of the above are true
-                } else {
-                    console.log(num);
-                }
-            }
-        }
+        
+        // !!!!!!!! FOR LOOP !!!!!!!!!
+        // function fizzBuzz() {
+        //     // counter
+        //     for (let num = 1; num <= 100; num++) {
+        //         // multiples of both 3 and 5, print "FizzBuzz" instead of the number
+        //         if (num % 3 === 0 && num % 5 === 0) {
+        //             console.log("FizzBuzz");
+        //             // multiple of 3, print "Fizz" instead of the number.
+        //         } else if (num % 3 === 0) {
+        //             console.log("Fizz");
+        //             // multiple of 5, print "Buzz" instead of the number.
+        //         } else if (num % 5 === 0) {
+        //             console.log("Buzz");
+        //             // Print the number if none of the above are true
+        //         } else {
+        //             console.log(num);
+        //         }
+        //     }
+        // }
 
-        fizzBuzz();
+        // fizzBuzz();
+
+
+        // !!!!!!!! WHILE LOOP !!!!!!!!!
+        function fizzBuzz(){
+            let counter = 1;
+
+            while(counter <=100){
+                if(counter % 3 === 0 && counter % 5 === 0){
+                    console.log("FizzBuzz");
+                } else if (counter % 3 === 0){
+                    console.log("Fizz");
+                } else if (counter % 5 === 0){
+                    console.log("Buzz");
+                } else {
+                    console.log(counter);
+                }
+
+                console.log(counter);
+                counter++;
+
+               }
+            }
+
+            fizzBuzz();
