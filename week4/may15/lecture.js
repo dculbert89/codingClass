@@ -23,11 +23,11 @@
     // - for
     // - while
     // - looping through 3d arrays
-        // let gameOfThrones = [
-        //     ["Arya", "Jon Snow", "Sansa"],
-        //     ["Cersei", "Jamie"],
-        //     ["Stannis", "Renly"]
-        // ]
+        let gameOfThrones = [
+            ["Arya", "Jon Snow", "Sansa"],
+            ["Cersei", "Jamie"],
+            ["Stannis", "Renly"]
+        ]
 
 
         function loopThrough3DArray (pieceOfPaper) {
@@ -38,13 +38,14 @@
         //         // i: I want to look at each section one by one on piece of paper.
         //         // ii: Once i am looking at the correct section, I want to do something over and over again, again:
                     for(let currentSectionItemIndex = 0; currentSectionItemIndex < currentSection.length; currentSectionItemIndex++){
-        //                 // a) Now that I am looking at current individual section, I want to look at the current numbered  item in that section
+        //
+        // a) Now that I am looking at current individual section, I want to look at the current numbered  item in that section
                         let theCurrentSectionItem = currentSection[currentSectionItemIndex];
         //                 // b) Once i have seen that numbered item, I want to write it down on another piece of paper.
                         console.log(theCurrentSectionItem);
-        //             }
-        //         }
-        //     }
+                    }
+                }
+            }
 
 
         // loopThrough3DArray(gameOfThrones)

@@ -56,14 +56,47 @@
 // console.log(summation(8))
 
 
-function noSpace(x){
-  let newStr = "";
-  for(let i = 0; i < x.length; i++){
-    if(x[i] !== " "){
-      newStr
-    }
-  }
-  return newStr
-}
+// function noSpace(x){
+//   let newStr = "";
+//   for(let i = 0; i < x.length; i++){
+//     if(x[i] !== " "){
+//       newStr
+//     }
+//   }
+//   return newStr
+// }
 
-console.log(noSpace("8 j 8"))
+// console.log(noSpace("8 j 8"))
+
+// function saleHotdogs(n){
+//   if (n < 5){
+//     return 100 * n
+//   }
+//   if (n>= 5 && n <10){
+//     return 95 * n
+//   }
+//   if ( n >= 10) {
+//     return 90 * n
+//   }
+//   return saleHotdogs
+// }
+
+function howManydays(month){
+  var days;
+  switch (n){
+      
+      case 1: n===1 || n===3 || n===5 || n ===7 || n ===8 || n ===10 || n===12
+        x = 31
+      
+      
+      case 2: n===4 || n===6 || n===9 || n===11 
+        x = 30
+      
+      
+      case 3: n===2 
+        x = 28
+      
+  
+  }
+  return days;
+}
