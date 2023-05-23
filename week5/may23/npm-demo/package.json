@@ -1,0 +1,25 @@
+{
+  "name": "npm-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "run-index": "node index.js",
+    "practice": "node practice-problem-one.js"
+    // "test": "jest --verbose"  <-----  !!!!!!!!!!
+    // "practice": "node practice-problem-one.js"  <-----  !!!!!!!!!!
+      // SCRIPT SECTION ALLOWS US TO USE NPM COMMANDS  <-----  !!!!!!!!!!
+        // npm run practice  <-----  !!!!!!!!!!
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}

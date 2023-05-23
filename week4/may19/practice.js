@@ -30,11 +30,17 @@ let companyDatabase = [
     }
 }
 
-companyDatabase.filter(removeTypo)
 
-// Write your code above
+// // !!!!! Ed's Soluction !!!!!!
+// companyDatabase.filter(removeTypo)
 
-console.log(companyDatabase)
+// companyDatabase.forEach((codeObj) => {
+//     delete codeObj.typo
+// })
+
+// // Write your code above
+
+// console.log(companyDatabase)
 
 
 
@@ -47,7 +53,7 @@ Take a look at the array provided below. Using an appropriate array looping meth
 
 */
 
-let seattleZoo = ["dog", "giraffe", "monkey", "dog", "lion", "dog", "orangutan", "lizards"];
+// let seattleZoo = ["dog", "giraffe", "monkey", "dog", "lion", "dog", "orangutan", "lizards"];
 // After you let all the dogs out of this array, you should get an array of 3 "dog" elements. 
 
 // Write your code below:
@@ -61,6 +67,19 @@ function dog (str) {
     let dogArray = seattleZoo.filter(dog)
 
     console.log(dogArray)
+
+
+// // !!!!!! Ed's Solution !!!!!!
+
+// const filteredZoo = seattleZoo.filter((animal) => {
+//     if (animal === "dog") {
+//         return true;
+//     }
+// });
+
+// console.log(filteredZoo, "mapped zoo")
+
+
 
 
 
@@ -88,7 +107,7 @@ Then, after your function runs, the above object could look like this:
 */
 
 let ellesCode = [
-    {
+    {   
         actualCode: "function theFunction..."
     },
     {
@@ -110,6 +129,16 @@ for (i = 0; i < ellesCode.length; i++){
     
 }
 
-// Write your code above
 
-console.log(ellesCode)
+
+// // !!!!! Ed's Solution !!!!!!
+// ellesCode.forEach(function(codeObj) {
+//     codeObj.typoOne = "#1";
+//     codeObj.typeTwo = "#2";
+// })
+
+
+
+// // Write your code above
+
+// console.log(ellesCode)

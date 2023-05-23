@@ -38,7 +38,7 @@ function finalAmount (object){
     }
       
     if (object.subscription && object.couponAmount) {
-        subTotal = subTotal - (subTotal * discountAmount) - couponAmount
+        subTotal = (subTotal - (subTotal * discountAmount)) - couponAmount
     } 
     
     else {
