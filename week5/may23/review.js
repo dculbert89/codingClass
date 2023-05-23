@@ -41,8 +41,19 @@ const newVar = () => {
     // while loop
     // for... in loop (!!!!!!!ONLY FOR OBJECTS!!!!!!!!)
 
+
+let groceryList = [
+    "eggs",
+    "milk",
+    "bread",
+    "lettuce",
+    "chicken"
+]
+
 // Array Looping Methods
     // .forEach
+        // always returns undefined
+        // It will run one callback function for each individual element in an array
     // .map
     // .filter
     // .sort
