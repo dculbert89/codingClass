@@ -25,4 +25,11 @@ function declareTributes (listOfTributes) {
 // ]
 
 // Use one of the array looping methods to solve this puzzle. 
-listOfTributes.forEach(declareTributes)
+listOfTributes.map(declareTributes)
+
+// // Option 2
+// let tributeAnnouncements = listOfTributes.map((tribute) => {
+//     let announcement = `${tribute.name} from District ${tribute.district}`
+//     return announcement
+// });
+// return tributeAnnouncements

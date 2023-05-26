@@ -28,3 +28,25 @@ function removeFaultyToys (toyInventory) {
 
 // Use one of the array looping methods to solve this puzzle.
 console.log(toyInventory2023.filter(removeFaultyToys))
+
+
+// function removeFaultyToys (toyInventory) {
+//     // Option1:
+//     function doesThisContainChemicals (singleToy) {
+//         if (!singleToy.containsChemicals) {
+//             // if (singleToy.containsChemicals === false)
+//             // line 36 and 37 are the same
+//             return singleToy
+//         }
+//     }
+// }
+
+    // let undamagedToys = toyInventory.filter(doesThisContainChemicals)
+    // return undamagedToys;
+
+    // // Option 2
+    // let undamagedToys = toyInventory.filter((singleToy) =>{
+    //     if (!singleToy.containsChemicals) {
+    //         return singleToy
+    //     }
+    // })

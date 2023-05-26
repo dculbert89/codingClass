@@ -12,25 +12,36 @@ function multiplication(a, b) {
 
 
         // Prompt #2
-
-    // Callback Function
-    function onlyOddCallBack (num){
-      if(num % 2 ===1) {
-        return num;
-      }
-    }
+        const array1 = [3, 2, 1];
+        const array2 = [9, 1, 1, 1, 4, 15, -1];
 
     // The Function
-function concatOdds(arr1, arr2) {
-    const onlyOdd = [];
+    function concatOdds(arr1, arr2) {
+      const odds = [];
+      
+      // Concatenate the two arrays
+      let combined = arr1.concat(arr2);
+      
+      // loop through array
+      for (let i = 0; i < combined.length; i++) {
+        let num = combined[i];
+        
+        // Check if the number is odd and if duplicate
+        if (num % 2 !== 0 && !odds.includes(num)) {
+          odds.push(num);
+        }
+      }
+      
+      // Sort the odd numbers in ascending order
+      odds.sort(function(a, b) {
+        return a - b;
+      });
+      
+      return odds;
+    }
 
-    onlyOdd.push(arr1.filter(onlyOddCallBack))
-    onlyOdd.push(arr2.filter(onlyOddCallBack))
-  
-  return onlyOdd
 
-}
-  console.log(concatOdds([3, 2, 1], [9, 1, 1, 1, 4, 15, -1]))
+    console.log(concatOdds(array1, array2));
 
     // if input isn't an integer then output error
     // should only print a single number that is odd rather than print each odd

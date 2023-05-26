@@ -18,10 +18,30 @@ TOPICS:
 /*
     // doument.getElementsByTagName("nameOfTag")
 */
+    let allLiElements = document.getElementsByTagName("h2")
 
 /*
 - CSS style selectors
-- element.classList & id
+- Any CSS Styling
+*/
+    for (let i = 0; i < allLiElements.length; i++){
+        let currentLiElement = allLiElements[i]
+
+        currentLiElement.style.color = "pink"
+        currentLiElement.style.border = "2px solid black"
+
+        // - element.innerText
+        currentLiElement.innerText = i
+
+
+    }
+/*
+- element.classList
+- element.IdList
 - element.innerText
 
 */
+
+// .add
+// .remove
+// .contains
