@@ -4,27 +4,28 @@ import { puppyList } from "../data";
 
 function App() {
   const [puppies, setPuppies] = useState(puppyList);
-  const [featPupId, setFeatPupId] = useState(null);
-
-  function handleClick(puppyId) {
-    setFeatPupId(puppyId);
-  }
+  const [selectedPuppy, setSelectedPuppy] = useState(undefined);
 
   return (
-    <div className="App">
-      {puppies.map((puppy) => (
-        <p onClick={() => handleClick(puppy.id)} key={puppy.id}>
-          {puppy.name}
-        </p>
-      ))}
+    <div>
+      {
+        
 
-      {featPupId && (
+        puppies.map((puppy, idx)=>{
+          return (
+            <div key={idx}>
+              <p>{puppy.name}</p>
+              <button onClick={() => setSelectedPuppy(puppy)}>See Details</button>
+            </div>
+          )
+        })
+      }
+
+      {selectedPuppy && (
         <div>
-          <h2>{puppies.name}</h2>
-          <ul>
-            <li>Age: {puppies.age}</li>
-            <li>Email: {puppies.email}</li>
-          </ul>
+          <p>{`Name: ${selectedPuppy.name}`}</p>
+          <p>{`Age: ${selectedPuppy.age}`}</p>
+          <p>{`Email: ${selectedPuppy.email}`}</p>
         </div>
       )}
     </div>
