@@ -1,41 +1,56 @@
-// BASE API URL
-const Base_API_URL = "https://fsa-puppy-bowl.herokuapp.com"
+const Base_URL = "https://fsa-puppy-bowl.herokuapp.com"
 
-
-// Calls for Player Data
-const fetchPlayerData = async () => {
+async function fetchPlayersData () {
     try {
-        const response = await fetch(`${Base_API_URL}/api/2304-ftb-et-web-ft/players`);
-        const data = await response.json();
-        // console.log(data)
-        return data;
 
-    } catch (error) {
-        console.log("Error");
-    }
-}
-
-// Displays Player Data 
-const renderPlayerData = async () => {
-    try {
-        let playerContainer = document.getElementById("player-container")
-
-        let apiList = await fetchPlayerData();
-        // console.log(apiList.data.players)
-
-        apiList.data.players.forEach(players => {
-            let playerName
-        }
+        
+        let response = await fetch(`${Base_URL}/api/2304-ftb-et-web-ft/players`)
+        
+        let translatedData = await response.json()
+        
+        let players = translatedData.data.players
+        
+        return players
         
     } catch (error) {
-        console.log("error")        
+        return error
     }
 }
 
+async function renderPlayerData () {
+    let playerContainer = document.getElementById("player-container")
 
-const init = async () => {
-    fetchPlayerData()
-    renderPlayerData()
+    let currentPlayers = await fetchPlayersData();
+
+    currentPlayers.forEach((player) => {
+        let newPlayerElement = document.createElement("div")
+        
+
+        newPlayerElement.innerText = `${player.name}-------`
+        newPlayerElement.style.fontWeight = "bold"
+        newPlayerElement.classList.add("name")
+
+        playerContainer.appendChild(newPlayerElement)
+
+        let newButton = document.createElement("button")
+        newButton.classList.add("button")
+        newButton.innerText = "Click to see Details"
+
+        newButton.addEventListener("click", () => {
+            localStorage.setItem("playerName", player.name)
+            localStorage.setItem("teamId", player.teamId)
+            localStorage.setItem("playerBreed", player.breed)
+            localStorage.setItem("playerStatus", player.status)
+            localStorage.setItem("playerImageURL", player.imageUrl)
+
+            window.location.href = "puppy-details.html"
+        })
+
+        newPlayerElement.appendChild(newButton)
+
+        console.log(player)
+    });
+    
 }
 
-init()
+renderPlayerData()
