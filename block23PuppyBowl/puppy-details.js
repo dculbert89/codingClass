@@ -2,8 +2,8 @@ window.onload = () => {
     let playerName = localStorage.getItem("playerName")
     let playerBreed = localStorage.getItem("playerBreed")
     let playerStatus = localStorage.getItem("playerStatus")
-    let storedUrl = localStorage.getItem("playerImageURL")
     let teamId = localStorage.getItem("teamId")
+    let storedUrl = localStorage.getItem("playerImageURL")
 
 
     let playerNameContainer = document.getElementById("player-name-container")
@@ -32,5 +32,7 @@ window.onload = () => {
     playerImageUrl.src = storedUrl
     playerImageUrl.classList.add("puppyImage")
     imageDetailsContainer.appendChild(playerImageUrl)
+
+    
 
 }

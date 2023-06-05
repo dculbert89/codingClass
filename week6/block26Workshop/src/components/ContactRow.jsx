@@ -1,4 +1,5 @@
 function ContactRow({setSelectedContactId, contact}) { 
+  // const {name, email, phone} = setSelectedContactId
     
   return(
     <tr

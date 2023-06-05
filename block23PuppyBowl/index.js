@@ -22,7 +22,7 @@ async function renderPlayerData () {
 
     let currentPlayers = await fetchPlayersData();
 
-    currentPlayers.forEach((player) => {
+    currentPlayers.map((player) => {
         let newPlayerElement = document.createElement("div")
         
 

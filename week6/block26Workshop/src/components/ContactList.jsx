@@ -10,8 +10,9 @@ const dummyContacts = [
 ];
 
 
-function ContactList({setSelectedContactId}) { 
-
+function ContactList(setSelectedContactId) { 
+  const {name, email, phone} = setSelectedContactId
+  
   const [contacts, setContacts] = useState(dummyContacts)
   useEffect(() => {
     async function fetchContacts() {
